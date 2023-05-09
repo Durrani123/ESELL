@@ -1,0 +1,89 @@
+
+
+.wrapped{
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    font-family: "value bold", sans-serif;
+}
+
+.wrapped .heading{
+    font-family: "Value bold";
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+form input{
+    width: 92%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+}
+
+button{
+
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    background: rgb(17, 107,143);
+    color: #fff;
+    cursor: pointer;
+}
+
+
+button:hover{
+    background: rgba(17, 107, 143, 0.877);
+}
+
+.terms{
+    margin-top: 0.2rem;
+
+}
+.terms input{
+    height: 1rem;
+    width: 1rem;
+    vertical-align: middle;
+    cursor: pointer;
+
+}
+.terms label{
+    font-size: 0.7rem;
+}
+.terms a{
+    color: rgb(17, 107, 143);
+    text-decoration: none;
+
+}
+.member{
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    color: #636363;
+}
+.member a{
+    color: rgb(17, 107 ,143);
+    text-decoration: none;
+
+}
+.forget{
+    text-align: right;
+    font-size: 0.7rem;
+    margin: 0.3rem 1.4rem 0 0;
+    
+
+}
+.forget a{
+    text-decoration: none;
+    color: #464647;
+    
+}

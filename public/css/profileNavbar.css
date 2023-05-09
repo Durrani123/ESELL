@@ -1,0 +1,108 @@
+.bodyCart{
+    position: relative;
+    overflow: hidden;
+    position: fixed;
+}
+#mainProfile{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition:0.5s ;
+    
+}
+
+.cartVisibility{
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.cartVisibilityToggle{
+    opacity :1;
+    z-index:100;
+}
+#mainProfile .leftCart{
+    width: 70%;
+    height: 100%;
+}
+
+#mainProfile .rightCart{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    padding: 35px;
+    font-family:"Value Bold";
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.profileHeadingLeft{
+    font-size: 20px;
+    transition: transform .2s;
+}
+.profileHeadingLeft:hover{
+    font-size: 20px;
+    transform: scale(1.3);
+
+}
+.profileHeadingRight{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    transition: transform .2s;
+}
+.profileHeadingRight:hover{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(1.3);
+}
+.profileHeading{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    padding: 10px;
+}
+.profileItem{
+    display: flex;
+    gap: 5%;
+    margin-bottom: 10%;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px rgb(160, 160, 160);
+    padding: 10px;
+    transition: transform .2s;
+}
+.profileItem:hover{
+    transform: translateY(-50%);
+}
+.profileItemright{
+    color: rgba(0,0,0,0.6);
+}
+.anchortoMain{
+    text-decoration: none;
+    color: #c5c7ce;
+    font-family: "Value Bold";
+    font-size: 1.5rem;
+}
+.customs-btn{
+    background-color: black;
+    color: white;
+    width:60%;
+    font-size: 1rem;
+    border-radius: 0%;
+    min-height:3.33333remrem;
+    font-family: 'Value bold';
+    margin-top: 5%;
+}
+.customs-btn:hover{
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,35 @@
+<%- include("partials/headerForm"); -%>
+<link rel="stylesheet" href="css/productsBoughtSold.css">
+
+<div class="main-body  zoom">
+    <h1>Products Sold</h1>
+</div>
+
+<% for (let i = 0; i < length; i++) { %>
+<div class="review1 zoom">
+    <div class="content">
+        <p id="itemCycle">Item:<%=titles[i]%> </p>
+        <p class="description"><%=descriptions[i]%></p>
+        <div class="rating">
+            <p>Item rating</p>
+            <div class="realRating">
+                <% for (let j = 1; j <= 5; j++) { %>
+                    <% if (j <= averageRating[i]) { %>
+                      <button class="star">&#9733;</button>
+                    <% } else { %>
+                      <button class="star">&#9734;</button>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <div class="image1">
+        <img src="<%=imageUrls[i]%>">
+        <p>PKR <%=prices[i]%></p>
+    </div>
+</div>
+<% } %>
+
+
+
+</div>

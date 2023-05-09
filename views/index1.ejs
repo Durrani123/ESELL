@@ -1,0 +1,107 @@
+<%- include("partials/header"); -%>
+<link rel="stylesheet" href="css/carousel.css">
+<link rel="stylesheet" href="css/category.css">
+<link rel="stylesheet" href="css/products.css">  
+  <!-- Carousel Starting -->
+  <div id="carouselStarting" class="carousel carouselStarting slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselStarting" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselStarting" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselStarting" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="images/Electronics.jpg" class="w-100" alt="...">
+        <button class="btn btn-secondary custom-btn">Shop Now</button>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="images/Electronics.jpg" class="d-block w-100" alt="...">
+        <button class="btn btn-secondary custom-btn">Shop Now</button>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="images/Electronics.jpg" class="d-block w-100" alt="...">
+        <button class="btn btn-secondary custom-btn">Shop Now</button>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselStarting" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselStarting" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <!-- Products Part -->
+  <div class="HeadingProductsdEnd zoom">
+    Trending items
+  </div>
+  <% if (length == 0){ %>
+    <div style="margin-bottom: 5%;"></div>
+    <div class="HeadingProductsdEnd zoom">
+      <h1 style="margin-bottom: 5%;"> No Items</h1>
+    </div>
+    <% } %>
+  <div class="productPart zoomProducts">
+    <% for (let i = 0; i < length; i++) { %>
+    <div class="itemsProduct itemsDescProducts">
+      <a href="/productDescription?productId=<%= productIds[i] %>">
+        <div class="imageProduct zoom">
+        <img src="<%= imageUrls[i] %>" alt="">
+        <div class="imageOverlay">
+          <button class="btn btn-secondary custom-btn"><%=prices[i]%> PKR</button>
+        </div>
+      </div>
+      </a>
+      <p class="main"><%=titles[i]%></p>
+      <p class="desc"><%=descriptions[i]%> .....</p>
+      <div class="realRating availaibility">
+        <% for (let j = 1; j <= 5; j++) { %>
+            <% if (j <= averageRating[i]) { %>
+              <button class="star">&#9733;</button>
+            <% } else { %>
+              <button class="star">&#9734;</button>
+            <% } %>
+        <% } %>
+    </div>
+    </div>
+    <% } %>
+  </div>
+<!-- Category Part -->
+<div class="categoryPart">
+  <a class="sad" href="sellPageInitial"><div class="categoryFirst zoom">
+    <div class="image">
+    <img src="images/shopping-cart.png" alt="">
+  </div>
+  <div class="categoryContent">
+    <div class="categoryHeading">
+    Sell Items
+  </div>
+   <div class="categoryDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam
+  </div>
+   <div class="categoryLink" >
+    <a href="initialCategorypage">Sell Now</a>
+  </div>
+  </div>
+  </div></a>
+  <a class="sad" href="initialCategorypage"><div class="categorySecond zoom">
+    <div class="image">
+    <img src="images/money.png" alt="">
+  </div>
+  <div class="categoryContent">
+    <div class="categoryHeading">
+    Shop Items
+  </div>
+   <div class="categoryDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+     ut labore et dolore magna aliqua. Ut enim ad minim veniam
+  </div>
+   <div class="categoryLink" >
+    <a href="initialCategorypage">Buy Now</a>
+  </div>
+  </div>
+  </div></a>
+</div>
+
+<%- include("partials/footer"); -%>

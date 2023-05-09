@@ -1,0 +1,117 @@
+.main-body
+{
+    /* background-color: #efe8e0; */
+    padding-top: 2%;
+    padding-bottom: 4%;
+    padding-left: 2%;
+}
+
+.main-body h1{
+    font-family: 'Value bold';
+    margin-bottom: 5%;
+    font-size: 3.83333rem;
+    /* margin-left: 10px; */
+}
+h1{
+    font-family: 'Value bold';
+}
+.linksToItems{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: center;
+    gap: 25%;
+}
+
+.ButtonDiv{
+    display: flex;
+    justify-content: center;
+}
+.custom-btn{
+    background-color: black;
+    color: white;
+    width:60%;
+    font-size: 1rem;
+    border-radius: 0%;
+    min-height:3.33333remrem;
+    font-family: 'Value bold';
+}
+.custom-btn:hover{
+    background-color: white;
+    color: black;
+}
+.log-out{
+    margin-top: 2%;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+.log-out button{
+    width: 15%;
+    font-size: large;
+}
+
+.profile-body{
+    /* background-color:black; */
+    margin:0 auto;
+    padding: 40px;
+    border-radius: 25px;
+    color: black;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px rgb(160, 160, 160);
+    transition: 0.5s;
+}
+
+.my-profile-bd{
+    display: flex;
+    /* margin: 0 auto; */
+    /* width:50%; */
+    /* height: 100%; */
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    /* gap: 10px; */
+}
+.my-profile-item{
+    margin: 0 auto;
+}
+.my-profile-item-title{
+    font-family: 'Value bold';
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.my-profile-item-info{
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+}
+.itemsDiv{
+    /* background-color: #e0e2ea; */
+    padding-bottom: 5%;
+  }
+.footer{
+    margin-top: 0;
+}
+.main-body-Heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items a{
+    width:100%;
+    text-align: center;
+}
+a.sub-heading{
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-family: 'value bold';
+    color: #ba7a2d;
+}
+.zoom {
+    transition: transform .2s;
+}
+.zoom:hover {
+    transform: scale(1.1);
+}

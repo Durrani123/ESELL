@@ -1,0 +1,68 @@
+<%- include("partials/headerForm"); -%>
+<link rel="stylesheet" href="css/mainCategoriespage.css">
+<div class="categories">
+    <div class="mainHeading">
+        <%=categoryName%>
+    </div>
+    <div class="productPart">
+        <% for (let i = 0; i < length; i++) { %>
+        <div class="itemsProduct itemsDescProducts">
+            <a href="/productDescription?productId=<%= productIds[i] %>">
+                <div class="imageProduct">
+                    <img src="<%= imageUrls[i] %>" alt="">
+                <div class="imageOverlay">
+                    <button class="btn btn-secondary custom-btn"><%=prices[i]%> PKR</button>
+                </div>
+                </div>
+            </a>
+          <p class="main"><%=titles[i]%></p>
+          <p class="desc"><%=descriptions[i]%> ....</p>
+            <div class="realRating availaibility">
+                <% for (let j = 1; j <= 5; j++) { %>
+                    <% if (j <= averageRating[i]) { %>
+                      <button class="star">&#9733;</button>
+                    <% } else { %>
+                      <button class="star">&#9734;</button>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+        <% } %>
+        <!-- <div class="itemsProduct itemsDescProducts">
+            <div class="imageProduct">
+              <img src="images/shoeProduct.jpg" alt="">
+              <div class="imageOverlay">
+                <button class="btn btn-secondary custom-btn">2800 PKR</button>
+              </div>
+            </div>
+            <p class="main">Superstar</p>
+            <p class="desc">(Product 5) Sample - Clothes And Acce..
+            </p>
+            <p class="availaibility">AVAILABLE</p>
+          </div>
+        <div class="itemsProduct itemsDescProducts">
+          <div class="imageProduct">
+            <img src="images/cycleProducts.webp" alt="">
+            <div class="imageOverlay">
+              <button class="btn btn-secondary custom-btn">2800 PKR</button>
+            </div>
+          </div>
+          <p class="main">Superstar</p>
+          <p class="desc">(Product 5) Sample - Clothes And Acce..
+          </p>
+          <p class="availaibility">AVAILABLE</p>
+        </div>
+        <div class="itemsProduct itemsDescProducts">
+          <div class="imageProduct">
+            <img src="images/bottleProducts.webp" alt="">
+            <div class="imageOverlay">
+              <button class="btn btn-secondary custom-btn">2800 PKR</button>
+            </div>
+          </div>
+          <p class="main">Superstar</p>
+          <p class="desc">(Product 5) Sample - Clothes And Acce..
+          </p>
+          <p class="availaibility">AVAILABLE</p>
+        </div>
+      </div> -->
+</div>

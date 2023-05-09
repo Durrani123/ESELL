@@ -1,0 +1,170 @@
+<%- include("partials/headerForm"); -%>
+<link rel="stylesheet" href="css/prodcutDescription.css">
+
+  <!-- Prodcut Desription -->
+    <div class="productInitial">
+        <div class="productImages zoomProducts">
+            <div class="productInitialImages zoom">
+                <img src="<%=dataUrl[0]%>" alt="">
+            </div>
+            <div class="productInitialImages zoom">
+                <img src="<%=dataUrl[1]%>" alt="">
+            </div>
+            <div class="productInitialImages zoom">
+                <img src="<%=dataUrl[2]%>" alt="">
+            </div>
+            <div class="productInitialImages zoom">
+                <img src="<%=dataUrl[3]%>" alt="">
+            </div>
+        </div>
+        <div class="productProperties">
+            <div class="propertiesHeading titlePropertiesHeading">
+                <div class="mainHeading">
+                    <%=title%>
+                </div>
+                <div class="price">
+                    <%=price%> PKR
+                </div>
+            </div>
+            <div class="propertiesRating">
+                <div class="propertiesHeading">
+                    Rating:
+                    <div class="realRating">
+                        <% for (let i = 1; i <= 5; i++) { %>
+                            <% if (i <= averageRating) { %>
+                              <button class="star zoom">&#9733;</button>
+                            <% } else { %>
+                              <button class="star zoom">&#9734;</button>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <div class="propertiesBox">
+                <div class="first top">
+                    <div class="propertiesHeading">
+                        Available
+                    </div>
+                    <div class="SubHeading">
+                        <%=available%>
+                    </div>
+                </div>
+                <div class="second top">
+                    <div class="propertiesHeading">
+                        Location
+                    </div>
+                    <div class="SubHeading right">
+                        <%=location%>
+                    </div>
+                </div>
+            </div>
+            <div class="propertiesBox">
+                <div class="first bottom">
+                    <div class="propertiesHeading">
+                        Seller
+                    </div>
+                    <div class="SubHeading">
+                        <%=seller%>
+                    </div>
+                </div>
+                <div class="second bottom">
+                    <div class="propertiesHeading">
+                        Category
+                    </div>
+                    <div class="SubHeading">
+                        <%=categoryName%>
+                    </div>
+                </div>
+            </div>
+            <div class="propertiesDescription">
+                <div class="propertiesHeading">
+                    Description
+                </div>
+                <div class="propertiesDescriptionContent">
+                    <%=description%>
+                </div>
+            </div>
+            <div class="addToCart">
+                <% if (available === "Yes") { %>
+                    <% if (!isLoggedIn) { %>
+                      <a href="/signup">
+                        <button class="btn btn-secondary custom-btn products">Add To Cart - <%=price%> PKR</button>
+                      </a>
+                    <% } else { %>
+                      <form action="/cart" method="post">
+                        <input type="hidden" name="productId" value="<%= productId %>">
+                        <button class="btn btn-secondary custom-btn" type="submit">Add To Cart - <%=price%> PKR</button>
+                      </form>
+                    <% } %>
+                  <% } else { %>
+                    <a href="/">
+                      <button class="btn btn-secondary custom-btn">Product Finished</button>
+                    </a>
+                  <% } %>
+                  
+            </div>
+        </div>
+    </div>
+    <div class="balanceReviews">
+        <div class="reviews">
+            <div class="reviewMainHeading">
+                REVIEWS
+            </div>
+            <% review.forEach(function(item){ %>
+            <div class="reviewItem zoom">
+                <div class="reviewItemHeading">
+                    <%=item.title%>
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <%=item.username%> 
+                    </div>
+                    <div class="area-date">
+                        <%=item.dates%> 
+                    </div>
+                </div>
+                <div class="reviewsContent">
+                    <%=item.review%> 
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        <div class="giveRatingDiv">
+            <div class="giveRatingDivHeading">
+                GIVE RATING: 
+            </div>
+            <% if(!isLoggedIn){ %>
+                <div class="giveRating">
+                    <button class="star zoom">&#9734;</button>
+                    <button class="star zoom">&#9734;</button>
+                    <button class="star zoom">&#9734;</button>
+                    <button class="star zoom">&#9734;</button>
+                    <button class="star zoom">&#9734;</button>
+                </div>
+                <% } %>
+                <% if(isLoggedIn){ %>
+                    <div class="giveRating">
+                        <a href="/rating?rating=1&productId=<%= productId %>"><button class="star zoom">&#9734;</button></a>
+                        <a href="/rating?rating=2&productId=<%= productId %>"><button class="star zoom">&#9734;</button></a>
+                        <a href="/rating?rating=3&productId=<%= productId %>"><button class="star zoom">&#9734;</button></a>
+                        <a href="/rating?rating=4&productId=<%= productId %>"><button class="star zoom">&#9734;</button></a>
+                        <a href="/rating?rating=5&productId=<%= productId %>"><button class="star zoom">&#9734;</button></a>
+                    </div>
+                    <% } %>
+        </div>
+    </div>
+    <div class="giveReview">
+    <% if(!isLoggedIn){ %>
+        <a href="/signup"><button class="btn btn-secondary custom-btn addReviewbutton">Add Review </button></a>
+    <% } %>
+    <% if(isLoggedIn){ %>
+        <form class="myForm" action="/review" method="post">
+            <input class="required addReview addReviewTitle"type="text" name="reviewTitle" placeholder="Add Title">
+            <textarea name="review" class="required addReview addReviewDesc" rows="4" placeholder="Add Description"></textarea>
+            <input type="hidden" name="productId" value="<%= productId %>">
+            <button class="btn btn-secondary custom-btn addReviewbutton" type="submit">Add Review </button>
+        </form>
+    <% } %>
+    </div>
+    <script src="validation.js"></script>
+    <%- include("partials/footer"); -%>

@@ -1,0 +1,41 @@
+
+
+/* Carousel Swipe Icon */
+.carousel-control-prev,
+.carousel-control-next {
+  color: black;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-item{
+    position: relative;
+}
+
+/* Custom button*/
+.custom-btn{
+    width: 120px;
+    font-weight:bold;
+    color: black;
+    background-color: white;
+    border-color:none;
+    font-family: 'value bold';
+}
+.custom-btn:hover{
+    color: white;
+    background-color: transparent;
+}
+.carousel-item button{
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    background-color: #ba7a2d;
+    border-color:#ba7a2d;
+}
+.carousel-item button:hover{
+    border-color:#ba7a2d;
+    color: black;
+    background-color: transparent;
+}

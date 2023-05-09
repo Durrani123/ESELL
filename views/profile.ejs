@@ -1,0 +1,78 @@
+<%- include("partials/headerForm"); -%>
+<link rel="stylesheet" href="css/profile.css">
+
+<div class="main-body">
+    <div class="main-body-Heading zoom">
+    <h1>My profile</h1>
+    </div>
+    <div id="container" class="container zoom">
+        <div class="profile-body">
+            <div class="my-profile-bd">
+                <div class="my-profile-item">
+                    <div class="my-profile-item-title">
+                        <p>USERNAME<p>
+                    </div>
+                    <div class="my-profile-item-info">
+                        <p><%=user.userName%></p>
+                    </div>
+                </div>
+                <div class="my-profile-item">
+                    <div class="my-profile-item-title">
+                        <p>NAME</p>
+                    </div>
+                    <div class="my-profile-item-info">
+                        <p><%=user.name%></p>
+                    </div>
+
+                </div>
+                <div class="my-profile-item">
+                    <div class="my-profile-item-title">
+                        <p>PASSWORD</p>
+                    </div>
+                    <div class="my-profile-item-info">
+                        <p><%=user.password%></p>
+                    </div>
+                </div>
+                <div class="my-profile-item">
+                    <div class="my-profile-item-title">
+                        <p>PRODUCTS BOUGHT</p>
+                    </div>
+                    <div class="my-profile-item-info">
+                        <p><%=user.productsBought%></p>
+                    </div>
+                </div>
+                <div class="my-profile-item">
+                    <div class="my-profile-item-title">
+                        <p>PRODUCTS SOLD</p>
+                    </div>
+                    <div class="my-profile-item-info">
+                        <p><%=user.productsSold%></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="itemsDiv">
+<div class="linksToItems">
+    <div class="items">
+        <h1 class="zoom">PRODUCTS BOUGHT</h1>
+        <div class="ButtonDiv">
+            <a class="Sub-heading zoom" href="/productsBought">View All</a>
+            </div>
+    </div>
+    <div class="items">
+        <h1 class="zoom">PRODUCTS SOLD</h1>
+        <div class="ButtonDiv">
+            <a class="Sub-heading zoom" href="/productsSold">View All</a>
+        </div>
+    </div>
+</div>
+<div class="log-out">
+    <a href="/logout"><button class="btn btn-secondary custom-btn">LOG OUT</button></a>
+</div>
+</div>
+<div class="profileFooter">
+<%- include("partials/footer"); -%>
+</div>

@@ -1,0 +1,20 @@
+<%- include("partials/headerForm"); -%>
+<link rel="stylesheet" href="css/login.css">
+
+<div class="wrapped">
+    <div class="heading">
+    Login
+    </div>
+    <form action="login" method="post">
+        <input type="text" name="userName" id="username" placeholder="Username" class = "required">
+        <input type="password" name="password" id="code" placeholder="Password" class = "required">
+
+    <button type="submit">Login</button>
+    </form>
+    <div class="member">
+        Not a member? <a href="./signup">Register Now</a>
+    </div>
+</div>
+<script src="validation.js"></script>
+</body>
+</html>

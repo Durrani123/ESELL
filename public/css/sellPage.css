@@ -1,0 +1,94 @@
+/* font awesome icon */
+.fa-arrow-left{
+    font-size: 27px;
+    margin-right: 25px;
+}
+/* Main Heading */
+.mainHeading{
+    font-family: 'Value bold';
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top:3%;
+}
+/* Category Choice */
+.categoryChoice{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "value regular";
+}
+
+.allcategoriesItems{
+    width: 30%;
+    margin: 5% auto;
+    text-align: start;
+    font-family: "value Bold";
+}
+.categoriesItems{
+    position: relative;
+    margin-top: 15px;
+}
+.categoriesItemsContent{
+    display: inline-block;
+}
+.second {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left:20px;
+}
+.categoriesItemsFont{
+    font-size: 40px;
+}
+.categoriesItems a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* SellPagePost */
+.postContainer textarea{
+    width: 100%;
+    border-radius: 10px;
+}
+.postDetailsInput input{
+    background-color: white;
+    border: 1px solid;
+}
+.postDetails{
+    width: 80%;
+    margin: 5% auto;
+}
+.postDetailsHeading{
+    font-family: 'Value bold';
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.postContainer input{
+    width: 100%;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.postPrice{
+    width: 80%;
+    margin: 5% auto;
+}
+.postImage{
+    width: 80%;
+    margin: 5% auto;
+}
+.postImage input{
+    border-radius: 0%;
+    background-color: white;
+}
+.postLocation{
+    width: 80%;
+    margin: 5% auto;
+}
+.custom-btn{
+    background-color: black;
+    color: white;
+    margin-top: 5%;
+}

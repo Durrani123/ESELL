@@ -1,0 +1,10 @@
+Reminders
+. Front Page Carousel Images
+
+Products Description Page
+. Year
+. Area
+. User
+. Condition
+
+Add stars for ratings

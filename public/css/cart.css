@@ -1,0 +1,92 @@
+.bodyCart{
+    position: relative;
+    overflow: hidden;
+    position: fixed;
+}
+#mainCart{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0,0,0,0.6); */
+    background-color: rgba(0,0,0,0.6);;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition:0.5s ;
+    
+}
+.cartVisibility{
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.cartVisibilityToggle{
+    opacity :1;
+    z-index:100;
+}
+#mainCart .leftCart{
+    width: 70%;
+    height: 100%;
+}
+
+#mainCart .rightCart{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    padding: 35px;
+    font-family:"Value Bold";
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+}
+.cartContentImgDescHeadingDesc{
+    font-family:"Value Regular";
+}
+.cartHeadingLeft{
+    font-size: 40px;
+}
+.cartHeadingRight{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.cartHeading{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.cartHeadingRight a{
+    color: black;
+} 
+.cartContent{
+    display: flex;
+    margin-bottom: 5%;
+}
+.cartContentImg{
+    display: flex;
+    gap: 20px;
+}
+.cartContent img{
+    width: 20%;
+}
+.cartContentRemove .item{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding-bottom: 35%;
+}
+.cartTotal{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+.cartButton button{
+    color: white;
+    background-color: black;
+    width: 100%;
+}

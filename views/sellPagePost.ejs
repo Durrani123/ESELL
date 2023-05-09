@@ -1,0 +1,92 @@
+<%- include("partials/headerForm"); -%>
+ <link rel="stylesheet" href="css/sellPage.css">
+
+<div class="mainHeading">
+    SELL YOUR ITEM
+  </div>
+
+  <form class="myForm" action="/sellPagePost" method="post"  novalidate enctype="multipart/form-data" >
+  <div class="postContainer">
+    <div class="postDetails">
+        <div class="postDetailsHeading">
+            Category
+        </div>
+        <div class="postDetailsInput">
+            <h6><%= category  %></h6>
+            <input type="hidden" name="category" value="<%= category %>">
+        </div>
+        <div class="postDetailsHeading">
+            ADD SOME DETAILS
+        </div>
+        <div class="postDetailsTitle">
+            <div class="postDetailsTitleHeading">
+                <h6>Ad Title</h6>
+             </div>
+            <div class="postDetailsInput">
+                <input type="text" name="title" class = "required">
+            </div>
+        </div>
+        <div class="postDetailsDesc">
+            <div class="postDetailsDescHeading">
+                <h6>Description</h6>
+            </div>
+            <div class="postDetailsText">
+                <textarea name="description"  rows="5" class = "required"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="postPrice">
+        <div class="postDetailsHeading">
+            ADD PRICE
+        </div>
+        <div class="postPriceDesc">
+            <div class="postDetailsDescHeading">
+                <h6>Price</h6>
+            </div>
+            <div class="postDetailsInput">
+                <input type="text" name="price" class = "required">
+            </div>
+        </div>
+    </div>
+    <div class="postPrice">
+        <div class="postDetailsHeading">
+            ADD TOTAL ITEMS
+        </div>
+        <div class="postPriceDesc">
+            <div class="postDetailsDescHeading">
+                <h6>Total Items</h6>
+            </div>
+            <div class="postDetailsInput">
+                <input type="text" name="totalItems" class = "required">
+            </div>
+        </div>
+    </div>
+    <div class="postImage">
+        <div class="postDetailsHeading">
+            ADD Images
+        </div>
+        <div class="postImageInput">
+            <input type="file" name="data" class = "required">
+            <input type="file" name="data" class = "required">
+            <input type="file" name="data" class = "required">
+            <input type="file" name="data" class = "required">
+        </div>
+    </div>
+    <div class="postLocation">
+        <div class="postDetailsHeading">
+            ADD LOCATION
+        </div>
+        <div class="postLocationDesc">
+            <div class="postDetailsDescHeading">
+                <h6>Location</h6>
+            </div>
+            <div class="postDetailsInput">
+                <input type="text" name="location" class = "required">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-secondary custom-btn">POST</button>
+    </form>
+    </div>
+    </div>
+    <script src="validation.js"></script>
+  </body>
